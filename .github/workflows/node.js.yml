@@ -1,16 +1,25 @@
-name: Node.js CI (wyuinche)
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+
+name: Node.js CI
 
 on:
   push:
-    branches: ["wyuinche"]
+    branches: ["uom6uoc-test"]
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js 14.x,
-        uses: actions/setup-node@v3
-      - run: npm i
-      - run: npm test
-      - run: npm run chat
+    - uses: actions/checkout@v3
+    - name: Use Node.js 14.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: 14.x
+        cache: 'npm'
+    - run: npm i
+    - run: npm test
+    - run: npm run chat
