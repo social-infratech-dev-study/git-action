@@ -1,6 +1,6 @@
 const MESSAGE_BODY = {
-  username: "wyuinche",
-  message: "모꼬...",
+  username: "uom6uoc-test",
+  message: "hello",
 };
 
 module.exports = MESSAGE_BODY;
